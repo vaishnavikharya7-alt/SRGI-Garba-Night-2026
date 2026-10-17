@@ -1,0 +1,8 @@
+{
+  "name": "SRGI Garba Night 2026",
+  "description": "Official event website for Garba Night 2026 at SR Group of Institutions (SRGI), Jhansi. Saturday, 17 October 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

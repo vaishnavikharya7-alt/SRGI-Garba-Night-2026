@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-midnight: #160923;
+    --color-royal: #371451;
+    --color-magenta: #C02D91;
+    --color-gold: #D9AD58;
+    --color-saffron: #FF9933;
+    --color-ivory: #FFF6E8;
+  }
+
+  body {
+    background-color: #160923;
+    color: #FFF6E8;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-devanagari {
+  font-family: 'Yatra One', 'Cinzel', serif;
+}
+
+/* Custom festive gold gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF6E8 0%, #D9AD58 50%, #FF9933 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #D9AD58, #FF9933, #D9AD58) 1;
+}
+
+/* Glassmorphism surfaces */
+.festive-glass {
+  background: rgba(55, 20, 81, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 173, 88, 0.18);
+}
+
+.festive-glass-card {
+  background: radial-gradient(circle at top left, rgba(55, 20, 81, 0.6) 0%, rgba(22, 9, 35, 0.8) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(217, 173, 88, 0.22);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.festive-glass-card:hover {
+  border-color: rgba(217, 173, 88, 0.45);
+  box-shadow: 0 20px 50px -10px rgba(192, 45, 145, 0.25), 0 0 25px rgba(217, 173, 88, 0.15);
+}
+
+/* Subtle glow animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 90s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-slow 120s linear infinite reverse;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
